@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20131111202216) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "scripts", force: true do |t|
     t.string   "slug"
     t.text     "scriptfile"
@@ -28,6 +25,6 @@ ActiveRecord::Schema.define(version: 20131111202216) do
     t.text     "secret"
   end
 
-  add_index "scripts", ["slug"], name: "index_scripts_on_slug", using: :btree
+  add_index "scripts", ["slug"], name: "index_scripts_on_slug"
 
 end
